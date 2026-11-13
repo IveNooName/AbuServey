@@ -1,0 +1,6 @@
+target/
+_to_delete/
+.idea/
+*.iml
+.vscode/
+.DS_Store

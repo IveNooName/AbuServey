@@ -1,0 +1,15 @@
+# Wird von Spring Boot automatisch gestartet (spring-boot-docker-compose), wenn das Backend
+# mit dem Repo-Root als Working Directory laeuft. Manuell: docker compose up -d
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: servey
+      POSTGRES_USER: servey
+      POSTGRES_PASSWORD: servey
+    ports:
+      - "5432"          # zufaelliger Host-Port, Spring Boot findet ihn selbst
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
